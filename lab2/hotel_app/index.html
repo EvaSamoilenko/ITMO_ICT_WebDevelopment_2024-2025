@@ -76,6 +76,16 @@
 </li>
     </ul>
   </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Лабораторная работа №3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../lab3/practical_works/CarOwnerships/" class="dropdown-item">Практическая работа 3.1</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -92,7 +102,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../../lab3/practical_works/CarOwnerships/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -153,15 +163,58 @@
 <li>Booking: fk комната, fk клиента, даты бронирования;</li>
 <li>Review: fk бронирование, рейтинг, отзыв.</li>
 </ul>
+<p>Пример структуры модели:</p>
+<pre><code>class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+</code></pre>
 <h2 id="_3">Функции</h2>
-<ol>
-<li>Регистрация и авторизация пользователя;</li>
-<li>Просмотр списка отелей;</li>
-<li>Для каждого отеля просмотр доступных комнат;</li>
-<li>Для каждой комнаты возможность посмотреть отзывы и совершить бронирование;</li>
-<li>Просмотр списка личных бронирований пользователя;</li>
-<li>Для каждого бронирования можно изменить даты посещения и написать свой отзыв.</li>
-</ol>
+<ul>
+<li>Регистрация и авторизация пользователя
+<img alt="login.png" src="../login.png" /></li>
+<li>
+<p>Просмотр списка отелей (классовое представление)</p>
+<p><code>class HotelListView(ListView):
+    model = Hotel
+    context_object_name = 'hotels'
+    template_name = 'hotel/hotels_list.html'</code></p>
+</li>
+<li>
+<p>Для каждого отеля просмотр доступных комнат
+<img alt="hotel_rooms.png" src="../hotel_rooms.png" /></p>
+</li>
+<li>
+<p>Для каждой комнаты возможность посмотреть отзывы и совершить бронирование
+<img alt="room_reviews.png" src="../room_reviews.png" />
+    <code>@login_required(login_url='/login/')
+    def book_room(request, hotel_id, room_id):
+        room = Room.objects.get(id=room_id)
+        user = request.user
+        context = {}
+        form = BookingCreateForm(request.POST or None)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = user
+            booking.room = room
+            form.save()
+            return redirect("bookings")
+        context['form'] = form
+        return render(request, "booking/book_room.html", context)</code></p>
+</li>
+<li>
+<p>Просмотр списка личных бронирований пользователя (функциональное представление)</p>
+<p><code>def user_bookings(request):
+    bookings = Booking.objects.filter(user_id=request.user)
+    return render(request, "booking/user_bookings.html", {"bookings": bookings})</code></p>
+</li>
+<li>
+<p>Для каждого бронирования можно изменить даты посещения и написать свой отзыв
+<img alt="bookings.png" src="../bookings.png" /></p>
+</li>
+<li>Для работника отеля доступна страница просмотра клиентов отелей за последний месяц.</li>
+</ul>
 <h2 id="_4">Начало работы</h2>
 <p>Для работы приложения воспользоваться командой:
 <code>python manage.py runserver</code></p>
