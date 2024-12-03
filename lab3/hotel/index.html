@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Hotel Management - Eva's Web Docs</title>
+        <title>Лабораторная работа Hotel - Eva's Web Docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Hotel Management</a>
+    <a href="../../lab2/hotel_app/" class="dropdown-item">Hotel Management</a>
 </li>
     </ul>
   </li>
@@ -82,11 +82,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../lab3/CarOwnerships/" class="dropdown-item">Практическая работа 3.1</a>
+    <a href="../CarOwnerships/" class="dropdown-item">Практическая работа 3.1</a>
 </li>
             
 <li>
-    <a href="../../lab3/hotel/" class="dropdown-item">Лабораторная работа Hotel</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Лабораторная работа Hotel</a>
 </li>
     </ul>
   </li>
@@ -101,12 +101,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../lab1/task_5/" class="nav-link">
+                                <a rel="prev" href="../CarOwnerships/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../lab3/CarOwnerships/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -128,21 +128,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#django" class="nav-link">Сайт Список Отелей (фреймворк Django)</a>
+            <li class="nav-item" data-bs-level="1"><a href="#3-django-rest-api" class="nav-link">Лабораторная работа 3. Реализация серверной части на django rest. Документирование API.</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Описание</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Модели</a>
+            <li class="nav-item" data-bs-level="2"><a href="#endpoint-" class="nav-link">Описание основных endpoint-ов</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Функции</a>
+            <li class="nav-item" data-bs-level="2"><a href="#endpoint-_1" class="nav-link">Описание дополнительных endpoint-ов</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Начало работы</a>
+            <li class="nav-item" data-bs-level="2"><a href="#djoser" class="nav-link">Добавление Djoser в проект</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -153,77 +149,88 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="django">Сайт Список Отелей (фреймворк Django)</h1>
-<h2 id="_1">Описание</h2>
-<p>Приложение Hotel_App умеет регистрировать нового пользователя и позволяет ему зайти в свой 
-аккаунт. Во время своего сеанса пользователь может рассматривать список доступных отелей, 
-комнаты в этих отелях и отзывы на них. Также юзер способен просматривать свои бронирования, 
-создавать новые, изменять и удалять их. Пользователь может свободно выражать свои мысли о 
-проживании в разделе отзывов.</p>
-<h2 id="_2">Модели</h2>
+<h1 id="3-django-rest-api">Лабораторная работа 3. Реализация серверной части на django rest. Документирование API.</h1>
+<hr />
+<h2 id="endpoint-"><strong>Описание основных endpoint-ов</strong></h2>
+<p>Получить информацию о всех комнатах отеля с возможностью добавления новой </p>
+<p><code>GET, POST /hotel/rooms/</code></p>
+<p><img alt="img_4.png" src="../lab_imgs/img_4.png" /></p>
+<p>Получить информацию об одной комнате с возможностью изменения и удаления объекта </p>
+<p><code>GET, PATCH, DELETE /hotel/rooms/&lt;room_id&gt;/</code></p>
+<p><img alt="img_5.png" src="../lab_imgs/img_5.png" /></p>
+<p>Получить информацию о всех клиентах отеля с возможностью добавления нового </p>
+<p><code>GET, POST /hotel/clients/</code></p>
+<p><img alt="img.png" src="../lab_imgs/img.png" /></p>
+<p>Получить информацию об одном клиенте с возможностью изменения и удаления объекта </p>
+<p><code>GET, PATCH, DELETE /hotel/clients/&lt;client_id&gt;/</code></p>
+<p><img alt="img_1.png" src="../lab_imgs/img_1.png" /></p>
+<p>Получить информацию о всех работниках отеля с возможностью добавления нового </p>
+<p><code>GET, POST /hotel/employees/</code></p>
+<p><img alt="img_2.png" src="../lab_imgs/img_2.png" /></p>
+<p>Получить информацию об одном работнике с возможностью изменения и удаления объекта </p>
+<p><code>GET, PATCH, DELETE /hotel/employees/&lt;employee_id&gt;/</code></p>
+<p><img alt="img_3.png" src="../lab_imgs/img_3.png" /></p>
+<p>Получить информацию о всех бронированиях в отеле с возможностью добавления нового </p>
+<p><code>GET, POST /hotel/bookings/</code></p>
+<p><img alt="img_6.png" src="../lab_imgs/img_6.png" /></p>
+<p>Получить информацию об одном бронировании с возможностью изменения и удаления объекта </p>
+<p><code>GET, PATCH, DELETE /hotel/bookings/&lt;booking_id&gt;/</code></p>
+<p><img alt="img_7.png" src="../lab_imgs/img_7.png" /></p>
+<p>Получить информацию о всех уборках комнат с возможностью добавления нового </p>
+<p><code>GET, POST /hotel/cleanings/</code></p>
+<p><img alt="img_8.png" src="../lab_imgs/img_8.png" /></p>
+<p>Получить информацию об одной уборки комнат с возможностью изменения и удаления объекта </p>
+<p><code>GET, PATCH, DELETE /hotel/cleanings/&lt;cleaning_id&gt;/</code></p>
+<p><img alt="img_9.png" src="../lab_imgs/img_9.png" /></p>
+<h2 id="endpoint-_1"><strong>Описание дополнительных endpoint-ов</strong></h2>
+<p>Получение информации:</p>
 <ul>
-<li>Hotel: название, владелец, адрес и описание;</li>
-<li>Room: fk отель, тип комнаты, цена, вместительность, дополнительные атрибуты;</li>
-<li>Booking: fk комната, fk клиента, даты бронирования;</li>
-<li>Review: fk бронирование, рейтинг, отзыв.</li>
+<li>о клиентах, проживавших в заданном номере, в заданный период времени</li>
 </ul>
-<p>Пример структуры модели:</p>
-<pre><code>class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    start_date = models.DateField()
-    end_date = models.DateField()
-</code></pre>
-<h2 id="_3">Функции</h2>
+<p><code>GET /hotel/clients-in-room/&lt;room_id&gt;/&lt;start_date&gt;/&lt;end_date&gt;/</code></p>
+<p><img alt="img_10.png" src="../lab_imgs/img_10.png" /></p>
 <ul>
-<li>Регистрация и авторизация пользователя
-<img alt="login.png" src="../login.png" /></li>
-<li>
-<p>Просмотр списка отелей (классовое представление)</p>
-<p><code>class HotelListView(ListView):
-    model = Hotel
-    context_object_name = 'hotels'
-    template_name = 'hotel/hotels_list.html'</code></p>
-</li>
-<li>
-<p>Для каждого отеля просмотр доступных комнат
-<img alt="hotel_rooms.png" src="../hotel_rooms.png" /></p>
-</li>
-<li>
-<p>Для каждой комнаты возможность посмотреть отзывы и совершить бронирование
-<img alt="room_reviews.png" src="../room_reviews.png" />
-    <code>@login_required(login_url='/login/')
-    def book_room(request, hotel_id, room_id):
-        room = Room.objects.get(id=room_id)
-        user = request.user
-        context = {}
-        form = BookingCreateForm(request.POST or None)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = user
-            booking.room = room
-            form.save()
-            return redirect("bookings")
-        context['form'] = form
-        return render(request, "booking/book_room.html", context)</code></p>
-</li>
-<li>
-<p>Просмотр списка личных бронирований пользователя (функциональное представление)</p>
-<p><code>def user_bookings(request):
-    bookings = Booking.objects.filter(user_id=request.user)
-    return render(request, "booking/user_bookings.html", {"bookings": bookings})</code></p>
-</li>
-<li>
-<p>Для каждого бронирования можно изменить даты посещения и написать свой отзыв
-<img alt="bookings.png" src="../bookings.png" /></p>
-</li>
-<li>Для работника отеля доступна страница просмотра клиентов отелей за последний месяц.</li>
+<li>о количестве клиентов, прибывших из заданного города</li>
 </ul>
-<h2 id="_4">Начало работы</h2>
-<p>Для работы приложения воспользоваться командой:
-<code>python manage.py runserver</code></p>
-<p>Ссылка на рабочий проект:
-http://127.0.0.1:8000/hotels/</p></div>
+<p><code>GET /hotel/clients-from-city/&lt;origin_city&gt;/</code></p>
+<p><img alt="img_11.png" src="../lab_imgs/img_11.png" /></p>
+<ul>
+<li>о том, кто из служащих убирал номер указанного клиента в заданный день недели</li>
+</ul>
+<p><code>GET /hotel/cleaning-employees/&lt;client_id&gt;/&lt;week_day&gt;/</code></p>
+<p><img alt="img_12.png" src="../lab_imgs/img_12.png" /></p>
+<ul>
+<li>о количестве в гостинице свободных номеров</li>
+</ul>
+<p><code>GET /hotel/free-rooms/&lt;start_date&gt;/&lt;end_date&gt;/</code></p>
+<p><img alt="img_13.png" src="../lab_imgs/img_13.png" /></p>
+<ul>
+<li>о списке клиентов с указанием места жительства, которые проживали в те же дни,
+что и заданный клиент</li>
+</ul>
+<p><code>GET /hotel/clients-while-client/&lt;request_client_id&gt;/</code></p>
+<p><img alt="img_14.png" src="../lab_imgs/img_14.png" /></p>
+<h3 id="_1">Выдача отчёта за запрашиваемый квартал</h3>
+<p>Отчёт содержит следующие данные:</p>
+<ul>
+<li>число клиентов за указанный период в каждом номере;</li>
+<li>количество номеров на каждом этаже;</li>
+<li>общая сумма дохода за каждый номер;</li>
+<li>суммарный доход по всей гостинице.</li>
+</ul>
+<p><code>GET /hotel/report/&lt;requested_quarter&gt;/</code></p>
+<p><img alt="img_15.png" src="../lab_imgs/img_15.png" />
+<img alt="img_16.png" src="../lab_imgs/img_16.png" /></p>
+<h2 id="djoser">Добавление Djoser в проект</h2>
+<p>Регистрация нового пользователя
+<code>POST http://127.0.0.1:8000/auth/users/</code></p>
+<p><img alt="img_17.png" src="../lab_imgs/img_17.png" /></p>
+<p>Авторизация пользователя -&gt; получение токена
+<code>POST http://127.0.0.1:8000/auth/token/login/</code></p>
+<p><img alt="img_18.png" src="../lab_imgs/img_18.png" /></p>
+<p>Запрос информации о пользователе с использованием личного токена
+<code>GET http://127.0.0.1:8000/auth/users/me/</code></p>
+<p><img alt="img_19.png" src="../lab_imgs/img_19.png" /></p></div>
             </div>
         </div>
 
