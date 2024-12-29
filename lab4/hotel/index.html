@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Hotel Administration - Eva's Web Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Eva's Web Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа №1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lab1/task_1/" class="dropdown-item">Задание 1</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task_2/" class="dropdown-item">Задание 2</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task_3/" class="dropdown-item">Задание 3</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task_4/" class="dropdown-item">Задание 4</a>
+</li>
+                                    
+<li>
+    <a href="../../lab1/task_5/" class="dropdown-item">Задание 5</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа №2</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lab2/hotel_app/" class="dropdown-item">Hotel Management</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа №3</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lab3/CarOwnerships/" class="dropdown-item">Практическая работа 3.1</a>
+</li>
+                                    
+<li>
+    <a href="../../lab3/hotel/" class="dropdown-item">Лабораторная работа Hotel</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа №4</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Hotel Administration</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../lab3/hotel/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#vuejs" class="nav-link">Администрирование отеля (Vue.js)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#cors-cross-origin-resource-sharing" class="nav-link">Добавление CORS (Cross-origin resource sharing) в проект</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#vuejs_1" class="nav-link">Работа Vue.js</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Интерфейсы авторизации и регистрации</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Интерфейсы моделей (списки, страницы редактирования и добавления новых объектов)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="vuejs">Администрирование отеля (Vue.js)</h1>
+<hr />
+<h2 id="cors-cross-origin-resource-sharing"><strong>Добавление CORS (Cross-origin resource sharing) в проект</strong></h2>
+<p>Добавление CORS в настройки django-проекта:</p>
+<p><img alt="" src="../imgs/img.png" /></p>
+<p>Определение его middleware сверх всех остальных:
+<img alt="" src="../imgs/img_1.png" /></p>
+<p>Добавление позволительных доменов:
+<img alt="" src="../imgs/img_2.png" /></p>
+<hr />
+<h2 id="vuejs_1"><strong>Работа Vue.js</strong></h2>
+<h2 id="_1">Интерфейсы авторизации и регистрации</h2>
+<p>На протяжении работы запросы выполнялись с помощью axios:</p>
+<pre><code>import axios from &quot;axios&quot;;
+
+const instance = axios.create({
+    baseURL: 'http://127.0.0.1:8000/',
+    timeout: 1000,
+});
+
+export default instance
+</code></pre>
+<p>Первое вхождение на сайт:
+<img alt="" src="../imgs/img_3.png" /></p>
+<h3 id="register-page">Register page</h3>
+<p>-- это форма с полями для имени пользователя, электронной почты и пароля.
+Активная ссылка под кнопкой переносит пользователя на Login page.</p>
+<p><img alt="" src="../imgs/img_5.png" /></p>
+<h3 id="login-page">Login page</h3>
+<p>-- имеет поля для имени пользователя и его пароля. Ссылка под кнопкой логин
+переадресовывает пользователя на Register page. При успешном логине пользователю присуждается
+токен, который хранится в базе данных приложения.</p>
+<p><img alt="" src="../imgs/img_4.png" /></p>
+<p>Ту же самую переадресацию делает страница при некорректно введённых данных,
+которые отсутствуют в системе.</p>
+<p><img alt="" src="../imgs/img_6.png" /></p>
+<h2 id="_2">Интерфейсы моделей (списки, страницы редактирования и добавления новых объектов)</h2>
+<h3 id="rooms-page">Rooms Page</h3>
+<p>Таким образом встречает сайт успешно залогиненного пользователя. Страница со всеми комнатами
+отеля состоит из двух столбцов из карточек, в каждой карточке представлена информация об объекте,
+есть кнопки редактирования и удаления.</p>
+<pre><code>function getRooms() {
+  instance.get('/hotel/rooms/').then(
+    response =&gt; {
+      if (response.status === 200) {
+        rooms.value = response.data
+      }
+    }
+  ).catch(error =&gt; console.log(error))
+}
+</code></pre>
+<p><img alt="" src="../imgs/img_7.png" /></p>
+<p>При попытке удаления высвечивает окно для подтверждения действия (аналогично оно высвечивается
+при попытке удаления всех других сущностей):</p>
+<pre><code>function deleteRoom(id) {
+  if (confirm(&quot;Are you sure you want to delete this room?&quot;)) {
+    instance.delete(`/hotel/rooms/${id}/`).then(response =&gt; {
+        if (response.status === 204) {
+          getRooms()
+        }
+      }
+    ).catch(error =&gt; console.log(error))
+  } else {
+    console.log(&quot;Room deletion cancelled.&quot;)
+  }
+}
+</code></pre>
+<p><img alt="" src="../imgs/img_8.png" /></p>
+<h3 id="clients-page">Clients Page</h3>
+<p>Тот же карточный вид с соответствующими кнопка в каждой. Однако под заголовок добавились две
+дополнительные опции: добавление и сортировка.</p>
+<p><img alt="" src="../imgs/img_9.png" /></p>
+<p>Форма для добавления имеет поля для создания нового клиента.</p>
+<p><img alt="" src="../imgs/img_10.png" /></p>
+<p>Страница сортировки представляет собой <strong>v-data-table</strong> с встроенным поиском по таблице, сортировке
+по каждому столбцу.</p>
+<p><img alt="" src="../imgs/img_11.png" /></p>
+<h3 id="employees-page">Employees Page</h3>
+<p>Работники отеля несут немного информации, поэтому уменьшенный масштаб и три столбца. Карточки,
+кнопки - по классике. Сортировать их не было смысла, поэтому есть только одна кнопка для
+добавления сущности.</p>
+<p><img alt="" src="../imgs/img_12.png" /></p>
+<p>Html-код добавления нового работника отеля:</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;form-container&quot;&gt;
+      &lt;h1&gt;Create Hotel Employee&lt;/h1&gt;
+      &lt;v-text-field label=&quot;First Name&quot; v-model=&quot;form.first_name&quot;&gt;&lt;/v-text-field&gt;
+      &lt;v-text-field label=&quot;Last Name&quot; v-model=&quot;form.last_name&quot;&gt;&lt;/v-text-field&gt;
+      &lt;v-text-field label=&quot;Father/Middle Name&quot; v-model=&quot;form.father_name&quot;&gt;&lt;/v-text-field&gt;
+      &lt;v-btn @click=&quot;createEmployee&quot; color=&quot;green&quot;&gt;Create&lt;/v-btn&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<h3 id="bookings-page">Bookings Page</h3>
+<p>Страница с бронированиями уже интереснее за счёт наличия внешних ключей.</p>
+<p><img alt="" src="../imgs/img_13.png" /></p>
+<p>В формах для редактирования и добавления присутствуют <strong>select</strong>-поля, состоящие из доступных
+внешних ключей. Для бронирования это клиенты и комнаты.</p>
+<pre><code>function getPage() {
+  instance.get(`/hotel/bookings/${router.currentRoute.value.params.id}/`)
+    .then(response =&gt; {
+        if (response.status === 200) {
+          form.value = response.data
+        }
+      }
+    ).catch(error =&gt; console.log(error))
+
+  instance.get('hotel/rooms/').then(response =&gt; {
+      if (response.status === 200) {
+        room_select.value = response.data
+      }
+    }
+  ).catch(error =&gt; console.log(error))
+
+  instance.get('hotel/clients/').then(response =&gt; {
+      if (response.status === 200) {
+        client_select.value = response.data
+      }
+    }
+  ).catch(error =&gt; console.log(error))
+}
+</code></pre>
+<p><img alt="" src="../imgs/img_14.png" /></p>
+<p>По стандарту - страница сортировки и поиска в виде <strong>v-data-table</strong>.</p>
+<pre><code>&lt;template&gt;
+  &lt;v-card
+    title=&quot;Sortable Bookings List&quot;
+    min-height=&quot;660&quot;
+    min-width=&quot;850&quot;
+    flat
+    flex=&quot;true&quot;
+    align=&quot;center&quot;
+  &gt;
+    &lt;template v-slot:text&gt;
+      &lt;v-text-field
+        v-model=&quot;search&quot;
+        label=&quot;Search&quot;
+        variant=&quot;outlined&quot;
+        hide-details
+        single-line
+      &gt;&lt;/v-text-field&gt;
+    &lt;/template&gt;
+
+    &lt;v-data-table
+      :headers=&quot;headers&quot;
+      :items=&quot;bookings&quot;
+      :search=&quot;search&quot;
+      width=&quot;1000&quot;
+    &gt;&lt;/v-data-table&gt;
+  &lt;/v-card&gt;
+&lt;/template&gt;
+</code></pre>
+<p><img alt="" src="../imgs/img_15.png" /></p>
+<h3 id="cleanings-page">Cleanings Page</h3>
+<p>Каждая уборка, как и работник, имеет немного информации, но здесь они сразу представлены в
+форме таблицы. Теперь для каждой строки таблицы есть <strong>crud</strong>-кнопки в тандеме с поиском и сортировкой.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;table-container&quot;&gt;
+    &lt;v-data-table
+      :headers=&quot;headers&quot;
+      :items=&quot;cleanings&quot;
+      :search=&quot;search&quot;
+      class=&quot;elevation-2 styled-table&quot;
+      items-per-page=&quot;6&quot;
+      height=&quot;450&quot;
+    &gt;
+      &lt;template v-slot:top&gt;
+        &lt;v-toolbar flat class=&quot;table-toolbar&quot;&gt;
+          &lt;v-toolbar-title class=&quot;v-toolbar_title&quot;&gt;Hotel Cleanings&lt;/v-toolbar-title&gt;
+          &lt;v-text-field
+            v-model=&quot;search&quot;
+            label=&quot;Search&quot;
+            variant=&quot;outlined&quot;
+            hide-details
+            single-line
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-btn class=&quot;add-btn&quot; color=&quot;green&quot; @click=&quot;router.push('/cleanings/add')&quot;&gt;
+            Add Cleaning
+          &lt;/v-btn&gt;
+        &lt;/v-toolbar&gt;
+      &lt;/template&gt;
+
+      &lt;template v-slot:item.actions=&quot;{ item }&quot;&gt;
+        &lt;div class=&quot;d-flex align-center justify-center action-buttons&quot;&gt;
+          &lt;v-btn variant=&quot;text&quot; color=&quot;blue&quot; @click=&quot;router.push('/cleanings/' + item.id)&quot;&gt;
+            Edit
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;text&quot; color=&quot;red&quot; @click=&quot;deleteCleaning(item.id)&quot;&gt;
+            Delete
+          &lt;/v-btn&gt;
+        &lt;/div&gt;
+      &lt;/template&gt;
+    &lt;/v-data-table&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p><img alt="" src="../imgs/img_16.png" /></p>
+<p>Было не обойтись без получения внешнего ключа - работника.</p>
+<p><img alt="" src="../imgs/img_17.png" /></p>
+<p>Ещё из интересного - радиокнопки для выбора этажа уборки.</p>
+<pre><code>&lt;v-radio-group
+    v-model=&quot;form.floor_num&quot;
+    inline
+    label=&quot;Floor Number&quot;&gt;
+        &lt;v-radio label=&quot;0&quot; :value=&quot;0&quot;&gt;&lt;/v-radio&gt;
+        &lt;v-radio label=&quot;1&quot; :value=&quot;1&quot;&gt;&lt;/v-radio&gt;
+        &lt;v-radio label=&quot;2&quot; :value=&quot;2&quot;&gt;&lt;/v-radio&gt;
+        &lt;v-radio label=&quot;3&quot; :value=&quot;3&quot;&gt;&lt;/v-radio&gt;
+        &lt;v-radio label=&quot;4&quot; :value=&quot;4&quot;&gt;&lt;/v-radio&gt;
+&lt;/v-radio-group&gt;
+</code></pre>
+<p><img alt="" src="../imgs/img_18.png" /></p>
+<h3 id="quarter-report-page">Quarter Report Page</h3>
+<p>Завершающая страница нашего обзора - отчёты по работе отеля за определённую четверть года.
+Два <strong>select</strong>-поля - выбор четверти и интересующей части отчёта.</p>
+<pre><code>function fetchReport() {
+  if (selectedQuarter.value &amp;&amp; selectedPart.value) {
+    loading.value = true;
+    instance
+      .get(`/hotel/report/${selectedQuarter.value}/`)
+      .then((response) =&gt; {
+        reportData.value = response.data[selectedPart.value];
+      })
+      .catch((error) =&gt; {
+        console.error(&quot;Error fetching report:&quot;, error);
+        reportData.value = &quot;Failed to load report.&quot;;
+      })
+      .finally(() =&gt; {
+        loading.value = false;
+      });
+  }
+}
+
+watch([selectedQuarter, selectedPart], fetchReport);
+</code></pre>
+<p><img alt="" src="../imgs/img_19.png" />
+<img alt="" src="../imgs/img_20.png" /></p>
+<p>Пример вывода отчёта по условиям:
+<img alt="" src="../imgs/img_21.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
